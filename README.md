@@ -49,4 +49,3 @@
    But, those suggesstion should also be align with the teams guidlines and criteria. Teams guidlines and criteria is the foundation of the good code.
    If everyone is aware then everything is clear.  
 
-=====
