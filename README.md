@@ -8,6 +8,7 @@
  - Ununiformed variable naming
     - There are multiple format of variable naming. like '$consumer_type', '$completeddate', and '$adminSenderEmail'
     - Consistency allows others to more easily understand your code.
+    - Should avoid using one letter variable use word instead ($k to $key).
  - Unecessary and unutilized variables
     - there are declared variable who are not utilized
     - can confused why is it existing, whats its purpose
