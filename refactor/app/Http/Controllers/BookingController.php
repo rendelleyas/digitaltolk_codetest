@@ -174,7 +174,6 @@ class BookingController extends Controller
         $jobId = isset($data['jobid']) && $data['jobid'] != ""? $data['jobid'] : "";
 
         $session = isset($data['session_time']) && $data['session_time'] != ""? $data['session_time'] : "";
-       
 
         if ($data['flagged'] == 'true') {
             if($data['admincomment'] == '') return "Please, add comment";

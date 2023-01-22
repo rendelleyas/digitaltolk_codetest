@@ -12,7 +12,7 @@
     - there are declared variable who are not utilized
     - can confused why is it existing, whats its purpose
  - No comments on the function/event fired who are not readble at first glance 
- 
+ - Long one line code, which are not that good to read. Takes time to digest.
 
 
 ### How would you have done it
@@ -41,6 +41,25 @@
         =========
         To:
             return response($this->repository->getUsersJobsHistory($user_id, $request));
+    ```
+ - #4 Long one line code. 
+    - long line of code is  to hard to read. Add a new line per data or function for readability
+    ```
+        From:
+            $jobs = $cuser->jobs()->with('user.userMeta', 'user.average', 'translatorJobRel.user.average', 'language', 'feedback', 'distance')->whereIn('status', ['completed', 'withdrawbefore24', 'withdrawafter24', 'timedout'])->orderBy('due', 'desc')->paginate(15);
+        =========
+        To:
+            $jobs = $cuser->jobs()
+                ->with('user.userMeta', 
+                    'user.average', 
+                    'translatorJobRel.user.average', 
+                    'language', 
+                    'feedback', 
+                    'distance'
+                )->whereIn('status', 
+                ['completed', 'withdrawbefore24', 'withdrawafter24', 'timedout'])
+                ->orderBy('due', 'desc')
+                ->paginate(15);
     ```
 
 ### Thoughts on formatting, structure, logic and etc.
