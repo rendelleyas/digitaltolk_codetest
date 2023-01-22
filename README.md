@@ -13,7 +13,7 @@
     - can confused why is it existing, whats its purpose
  - No comments on the function/event fired who are not readble at first glance 
  - Long one line code, which are not that good to read. Takes time to digest.
-
+ - Multiple logic inside the function which can be separated. 
 
 ### How would you have done it
  - #1 Ununiformed variable naming
@@ -61,6 +61,8 @@
                 ->orderBy('due', 'desc')
                 ->paginate(15);
     ```
+ - #5 Function with long lines of code. Multiple logic inside the function 
+    - Too many logic inside a function. To make it more readable segregate each function into small function or put it on different class.
 
 ### Thoughts on formatting, structure, logic and etc.
  - Personally, the code is readable, I can clearly read it. 
